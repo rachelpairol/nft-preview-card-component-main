@@ -1,0 +1,185 @@
+/*MAIN*/
+
+p {
+    font-size: 18px;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1440px;
+    min-width: 375px;
+    align-items: center;
+}
+
+main {
+    width: 1200px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hsl(216, 50%, 15%);
+}
+
+.container1 {
+    width: 380px;
+    height: 550px;
+    background-color: hsl(216, 50%, 16%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.container2 {
+    width: 320px;
+    height: 520px;
+    background-color: hsl(217, 54%, 15%);
+    border-radius: 30px;
+    margin: 15px 15px 15px 15px;
+}
+
+.tarjetacontainer {
+    width: 260px;
+    height: 450px;
+    background-color: hsl(215, 32%, 27%);
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 20px 20px 20px;
+    color: rgb(167, 164, 164);
+    font-family: 'Outfit', sans-serif;
+    align-self: center;
+}
+
+.tarjetacontainer figure {
+    height: 260px;
+    width: 260px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+}
+
+.tarjetacontainer figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.tarjetacontainer figure .img_view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 0.7);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.tarjetacontainer figure .img_view img {
+    width: 40px;
+    height: 40px;
+    margin-top: 100px;
+}
+
+.tarjetacontainer figure:hover>.img_view {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tarjetacontainer p:nth-child(3) {
+    color: rgb(167, 164, 164);
+    font-size: 16px;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+.tarjetacontainer p:nth-child(2) {
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.tarjetacontainer p:nth-child(2):hover {
+    color: hsl(178, 100%, 50%);
+    font-weight: bold;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.ethereum {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ethereum :first-child {
+    color: hsl(178, 100%, 50%);
+    font-weight: bold;
+    font-weight: 400;
+}
+
+.tarjetacontainer img {
+    border-radius: 2%;
+}
+
+hr {
+    width: 100%;
+    background-color: hsl(215, 32%, 27%);
+    border-color: hsl(0, 0%, 42%);
+}
+
+.avatar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.avatar img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+}
+
+.avatar a {
+    color: white;
+    text-decoration: none;
+}
+
+.avatar a:hover {
+    color: hsl(178, 100%, 50%);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/*FOOTER*/
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution a:link {
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution a:visited {
+    color: hsl(228, 45%, 44%);
+}
