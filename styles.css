@@ -1,80 +1,80 @@
-/*MAIN*/
+:root {
+    --black: #000000;
+    --dark: #232830;
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --sm: 13px;
+    --md: 15px;
+    --lg: 16px;
+}
 
-p {
-    font-size: 18px;
-    color: hsl(0, 0%, 100%);
-    font-family: 'Outfit', sans-serif;
-    font-weight: 300;
+
+/*- Mobile: 375px
+- Desktop: 1440px*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 1440px;
-    min-width: 375px;
-    align-items: center;
-}
-
-main {
-    width: 1200px;
-    height: 700px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-color: hsl(216, 50%, 15%);
-}
-
-.container1 {
-    width: 380px;
-    height: 550px;
-    background-color: hsl(216, 50%, 16%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 30px;
-}
-
-.container2 {
-    width: 320px;
-    height: 520px;
-    background-color: hsl(217, 54%, 15%);
-    border-radius: 30px;
-    margin: 15px 15px 15px 15px;
-}
-
-.tarjetacontainer {
-    width: 260px;
-    height: 450px;
-    background-color: hsl(215, 32%, 27%);
-    border-radius: 10px;
-    padding: 10px 10px 10px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 20px 20px 20px 20px;
-    color: rgb(167, 164, 164);
     font-family: 'Outfit', sans-serif;
-    align-self: center;
-}
-
-.tarjetacontainer figure {
-    height: 260px;
-    width: 260px;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
     margin: 0;
 }
 
-.tarjetacontainer figure img {
+
+/*MAIN*/
+
+main {
+    width: 1440px;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: hsl(217, 54%, 12%);
+    place-content: center;
+    margin: 0px 30px 0 70px;
+}
+
+.main-container {
+    width: 300px;
+    height: 70vh;
+    background-color: var(--very-dark-blue-main);
+    display: grid;
+    place-items: center;
+    border-radius: 30px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 250px;
+    justify-items: center;
+    background-color: var(--very-dark-blue-card);
+    border-radius: 10px;
+}
+
+.card-container figure {
+    height: 230px;
+    width: 230px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin: 12px 12px 12px 12px;
+}
+
+.card-container figure img {
     width: 100%;
     height: 100%;
+    border-radius: 2%;
     transition: all 500ms ease-out;
 }
 
-.tarjetacontainer figure .img_view {
+.card-container figure .img_view {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -86,75 +86,87 @@ main {
     text-align: center;
 }
 
-.tarjetacontainer figure .img_view img {
+.card-container figure .img_view img {
     width: 40px;
     height: 40px;
     margin-top: 100px;
 }
 
-.tarjetacontainer figure:hover>.img_view {
+.card-container figure:hover>.img_view {
     opacity: 1;
     visibility: visible;
 }
 
-.tarjetacontainer p:nth-child(3) {
-    color: rgb(167, 164, 164);
-    font-size: 16px;
-    margin-top: 0;
-    font-weight: 400;
+.description {
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
-.tarjetacontainer p:nth-child(2) {
+.description p:nth-child(1) {
+    font-size: var(--lg);
+    margin-bottom: 12px;
+    justify-self: left;
+    color: var(--white);
     font-weight: bold;
-    font-weight: 600;
 }
 
-.tarjetacontainer p:nth-child(2):hover {
-    color: hsl(178, 100%, 50%);
+.description p:nth-child(1):hover {
+    color: var(--Cyan);
     font-weight: bold;
     cursor: pointer;
-    font-weight: 600;
+}
+
+.description p:nth-child(2) {
+    color: var(--Soft-blue);
+    font-size: var(--sm);
 }
 
 .ethereum {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: space-between;
+    gap: 16px;
     align-items: center;
+    margin-top: 20px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
 }
 
 .ethereum :first-child {
-    color: hsl(178, 100%, 50%);
-    font-weight: bold;
-    font-weight: 400;
+    color: var(--Cyan);
+    font-size: var(--sm);
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
 }
 
-.tarjetacontainer img {
-    border-radius: 2%;
-}
-
-hr {
-    width: 100%;
-    background-color: hsl(215, 32%, 27%);
-    border-color: hsl(0, 0%, 42%);
+.ethereum :last-child {
+    color: var(--Soft-blue);
+    font-size: var(--sm);
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
 }
 
 .avatar {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
     align-items: center;
+    margin: 12px 20px 24px 0;
+    font-size: var(--sm);
+    color: var(--Soft-blue);
 }
 
 .avatar img {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border-width: 1px;
-    border-style: solid;
-    border-color: white;
+    border: 1px solid var(--white);
 }
 
 .avatar a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -182,4 +194,10 @@ hr {
 
 .attribution a:visited {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width:640px) {
+    main {
+        width: 375px;
+    }
 }

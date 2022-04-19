@@ -7,6 +7,9 @@
     <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
 
     <title>Frontend Mentor | NFT preview card component</title>
@@ -17,14 +20,15 @@
 
 <body>
     <main>
-        <section class="container1">
-            <section class="container2">
-                <section class="tarjetacontainer">
-                    <figure><img src="/images/image-equilibrium.jpg" alt="image_equilibrium">
-                        <div class="img_view">
-                            <img src="/images/icon-view.svg">
-                        </div>
-                    </figure>
+
+        <section class="main-container">
+            <section class="card-container">
+                <figure><img src="/images/image-equilibrium.jpg" alt="image_equilibrium">
+                    <div class="img_view">
+                        <img src="/images/icon-view.svg">
+                    </div>
+                </figure>
+                <div class="description">
                     <p>Equilibrium #3429</p>
                     <p>Our Equilibrium collection promotes balance and calm.</p>
 
@@ -32,13 +36,12 @@
                         <div><img src="/images/icon-ethereum.svg"> 0.041 ETH</div>
                         <div><img src="/images/icon-clock.svg"> 3 days left</div>
                     </div>
-
-                    <hr>
-                    <div class="avatar"><img src="/images/image-avatar.png">Creation of <a href="https://github.com/rachelpairol/nft-preview-card-component-main.git">Rachel Pairol</a>
-                    </div>
-                </section>
+                </div>
+                <div class="avatar"><img src="/images/image-avatar.png">Creation of <a href="https://github.com/rachelpairol/nft-preview-card-component-main.git">Rachel Pairol</a>
+                </div>
             </section>
         </section>
+
 
     </main>
 
